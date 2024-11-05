@@ -1,7 +1,7 @@
 // Main application component. Initializes layout and routing.
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { MainLayout } from './layouts/MainLayout';
+import MainLayout from './layouts/MainLayout.jsx';
 import { HomePage, MoviesWatchlist } from './pages/HomePage';
 
 const router = createBrowserRouter([
