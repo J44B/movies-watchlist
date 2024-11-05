@@ -1,13 +1,13 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
 import { HomePage } from './HomePage';
-import { MoviesWatchlist } from './MoviesWatchList';
+import { MoviesWatchList } from './MoviesWatchList';
 import { MovieDetails } from './MovieDetails';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { HomePage, MoviesWatchlist, MovieDetails };
+export { HomePage, MoviesWatchList, MovieDetails };
 
 // -------------------------------------------- End export section  --------------------------------------------
