@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/common/components-index';
+import { Header } from '../components/common/components-index';
 
-export default function MainLayout() {
+export function MainLayout() {
     return (
         <>
-            <div className="max-w-screen-xl mx-auto">
+            <div className="max-w-full">
                 <Header />
-                <main className="container mx-auto">
+                <main className="container max-w-7xl mx-auto">
                     <Outlet />
                 </main>
             </div>

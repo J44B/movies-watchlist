@@ -1,6 +1,7 @@
-export default function Header() {
+export function Header() {
     return (
-        <div className="navbar bg-[#c3a689]">
+        // the header should have a color gradient
+        <div className="navbar bg-[#c3a689] shadow-md">
             <div className="flex-1">
                 <div className="flex flex-row justify-between">
                     <div className="w-10">
@@ -9,7 +10,9 @@ export default function Header() {
                             src="src/assets/pictures/watchlist.png"
                         />
                     </div>
-                    <a className="text-s p-2 text-[#1D232A]">powered by</a>
+                    <a className="text-xl p-2 text-[#1D232A]">
+                        The Wonderful Watchlist
+                    </a>
                 </div>
             </div>
             <div className="flex-none gap-2">
@@ -33,23 +36,23 @@ export default function Header() {
                             />
                         </div>
                     </div>
-                    <ul
+                    {/* <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                     >
                         <li>
                             <a className="justify-between">
-                                Profile (placeholder)
-                                <span className="badge">New (placeholder)</span>
+                                Profile
+                                <span className="badge">New</span>
                             </a>
                         </li>
                         <li>
-                            <a>Settings (placeholder)</a>
+                            <a>Settings</a>
                         </li>
                         <li>
-                            <a>Logout (placeholder)</a>
+                            <a>Logout</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </div>
