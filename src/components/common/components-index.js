@@ -2,11 +2,12 @@
 
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { Card } from './Card';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { Header, Footer };
+export { Header, Footer, Card };
 
 // -------------------------------------------- End export section  --------------------------------------------
