@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <div className="navbar bg-[#F0F0C9]">
+        <div className="navbar bg-[#c3a689]">
             <div className="flex-1">
                 <div className="flex flex-row justify-between">
                     <div className="w-10">
@@ -9,7 +9,7 @@ export default function Header() {
                             src="src/assets/pictures/watchlist.png"
                         />
                     </div>
-                    <a className="text-s p-2">powered by</a>
+                    <a className="text-s p-2 text-[#1D232A]">powered by</a>
                 </div>
             </div>
             <div className="flex-none gap-2">
@@ -26,7 +26,7 @@ export default function Header() {
                         role="button"
                         className="btn btn-ghost btn-circle avatar"
                     >
-                        <div className="w-10 rounded-full">
+                        <div className="w-10 rounded-full color-[#1D232A]">
                             <img
                                 alt="Profile"
                                 src="src/assets/pictures/avatar-profile.png"
