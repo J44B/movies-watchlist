@@ -1,9 +1,18 @@
 // Main application component. Initializes layout and routing.
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Header from './components/common/Header';
+import { MainLayout } from './layouts/MainLayout';
+import { HomePage, MoviesWatchlist } from './pages/HomePage';
 
 const router = createBrowserRouter([
+    {
+        path: '',
+        element: (
+            <>
+                <MainLayout />
+            </>
+        ),
+    },
     {
         path: '/',
         element: <HomePage />,
@@ -13,11 +22,6 @@ const router = createBrowserRouter([
         element: <MoviesWatchlist />,
     },
 ]);
-return (
-    <>
-        <Header />
-    </>
-);
 
 const App = () => <RouterProvider router={router} />;
 
