@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Header } from '../components/common/components-index';
+import { Header, Footer } from '../components/common/components-index';
 
 export function MainLayout() {
     return (
@@ -9,6 +9,7 @@ export function MainLayout() {
                 <main className="container max-w-7xl mx-auto">
                     <Outlet />
                 </main>
+                <Footer />
             </div>
         </>
     );
