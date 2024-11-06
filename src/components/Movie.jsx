@@ -7,6 +7,8 @@ todos:
 - smaller cards with fitting images
 */
 
+import { Button } from './components-index';
+
 export function Movie({ data }) {
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
@@ -28,11 +30,7 @@ export function Movie({ data }) {
                             {data.release_date.slice(0, 4)}
                         </div>
                     </div>
-                    <div className="button-container">
-                        <button className="btn btn-active btn-neutral">
-                            Details
-                        </button>
-                    </div>
+                    <Button name={'Details'} />
                 </div>
             </div>
         </div>
