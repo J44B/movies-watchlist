@@ -4,7 +4,6 @@
 todos:
 - outsourcing of button and badges
 - button functionality
-- make buttons and badges fit properly
 - smaller cards with fitting images
 */
 
@@ -18,21 +17,21 @@ export function Movie({ data }) {
                 />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">{data.title}</h2>
+                <h2 className="card-title text-base">{data.title}</h2>
 
-                <div className="card-action-container">
-                    <div className="button-container flex flex-row justify-end align-baseline">
-                        <button className="btn btn-active btn-neutral justify-end align-baseline">
-                            Details
-                        </button>
-                    </div>
-                    <div className="badge-container flex flex-row justify-start align-baseline">
+                <div className="card-action-container flex flex-row justify-between items-center">
+                    <div className="badge-container flex flex-row gap-2 ">
                         <div className="badge badge-outline bg-[#89b49f] text-[#2f4858] font-bold">
                             {data.vote_average}
                         </div>
                         <div className="badge badge-outline">
                             {data.release_date.slice(0, 4)}
                         </div>
+                    </div>
+                    <div className="button-container">
+                        <button className="btn btn-active btn-neutral">
+                            Details
+                        </button>
                     </div>
                 </div>
             </div>
