@@ -1,11 +1,11 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
-import { apiKey, baseUrl, popularMoviesUrl } from './config';
+import { apiKey, baseUrl, popularMoviesUrl, imageUrl } from './config';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { apiKey, baseUrl, popularMoviesUrl };
+export { apiKey, baseUrl, popularMoviesUrl, imageUrl };
 
 // -------------------------------------------- End export section  --------------------------------------------

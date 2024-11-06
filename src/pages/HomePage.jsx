@@ -1,42 +1,26 @@
 // Page Component: Shows Home Page
 
+/*
+todos:
+- proper loading state
+- proper error state and handling
+- nicer h1
+*/
+
 import { useState, useEffect } from 'react';
 import { getPopularMovies } from '../modules/module-index';
 import { Movie } from '../components/components-index';
 
 export function HomePage() {
     const [popularMovies, setPopularMovies] = useState([]);
-    const [error, setError] = useState(null); // needs error state
-    const [loading, setLoading] = useState(false); // needs loading state
+    // needs error state
+    // needs loading state
 
     useEffect(() => {
         async function getMovies() {
-            setError('');
-            setLoading(true);
-            try {
-                const data = await getPopularMovies();
-                // if (!data.ok) {
-                //     throw new Error(error);
-                // }
-                console.log(data);
-                setPopularMovies(data.results);
-            } catch (error) {
-                setError('Request of popular movies failed');
-            }
-
-            if (loading)
-                return (
-                    <div
-                        id="category-container"
-                        className="flex gap-4 mt-2 flex-wrap justify-center"
-                    >
-                        Loading...
-                    </div>
-                );
-
-            {
-                setLoading(false);
-            }
+            const data = await getPopularMovies();
+            console.log(data);
+            setPopularMovies(data.results);
         }
 
         getMovies();
