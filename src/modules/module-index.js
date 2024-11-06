@@ -1,13 +1,11 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { Movie } from './Movie';
+import { getPopularMovies } from './fetchPopularMovies';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { Header, Footer, Movie };
+export { getPopularMovies };
 
 // -------------------------------------------- End export section  --------------------------------------------

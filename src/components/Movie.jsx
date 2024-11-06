@@ -1,8 +1,8 @@
 // Atomic design: card component
 
-export function Card() {
+export function Movie() {
     return (
-        <div className="card bg-[#514538] w-96 shadow-xl">
+        <div className="card bg-[#514538] w-72 h-auto shadow-xl">
             <figure>
                 <img src="" alt="movie picture from api" />
             </figure>
@@ -26,10 +26,4 @@ export function Card() {
             </div>
         </div>
     );
-}
-
-{
-    /* <div className="card-actions justify-end">
-    <button className="btn btn-active btn-neutral">prop to be set</button>
-</div>; */
 }

@@ -1,6 +1,6 @@
 // Page Component: Shows watch list
 
-import { Card } from '../components/components-index';
+import { Movie } from '../components/components-index';
 
 export function MoviesWatchList() {
     return (
@@ -11,7 +11,7 @@ export function MoviesWatchList() {
                 </h1>
             </div>
             <div className="movies-container grid grid-cols-4 gap-4">
-                <Card />
+                <Movie />
             </div>
         </>
     );

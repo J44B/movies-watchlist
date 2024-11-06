@@ -1,13 +1,11 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { Movie } from './Movie';
+import { apiKey, baseUrl, popularMoviesUrl } from './config';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { Header, Footer, Movie };
+export { apiKey, baseUrl, popularMoviesUrl };
 
 // -------------------------------------------- End export section  --------------------------------------------
