@@ -1,6 +1,6 @@
 // Page Component: Shows Home Page
 
-import { Card } from '../components/common/components-index';
+import { Card } from '../components/components-index';
 
 export function HomePage() {
     return (
