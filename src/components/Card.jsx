@@ -12,12 +12,24 @@ export function Card() {
                     Here goes the movie description, coming from the api. It
                     should be trimmed after n words.
                 </p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-active btn-neutral">
-                        prop to be set
-                    </button>
+                <div className="card-action-container">
+                    <div className="button-container flex flex-row justify-end">
+                        <button className="btn btn-active btn-neutral">
+                            prop to be set
+                        </button>
+                    </div>
+                    <div className="badge-container flex flex-row justify-start align-baseline">
+                        <div className="badge badge-outline">avg. rating</div>
+                        <div className="badge badge-outline">year</div>
+                    </div>
                 </div>
             </div>
         </div>
     );
+}
+
+{
+    /* <div className="card-actions justify-end">
+    <button className="btn btn-active btn-neutral">prop to be set</button>
+</div>; */
 }
