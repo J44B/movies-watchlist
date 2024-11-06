@@ -1,5 +1,18 @@
 // Page Component: Shows watch list
 
+import { Card } from '../components/components-index';
+
 export function MoviesWatchList() {
-    return <h1>MoviesWatchList</h1>;
+    return (
+        <>
+            <div className="flex flex-col">
+                <h1 className="text-3xl mb-4">
+                    My movies shown on my watch list
+                </h1>
+            </div>
+            <div className="movies-container grid grid-cols-4 gap-4">
+                <Card />
+            </div>
+        </>
+    );
 }
