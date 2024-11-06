@@ -8,8 +8,10 @@ todos:
 */
 
 import { Button } from './components-index';
+import { useState } from 'react';
 
 export function Movie({ data }) {
+    const [showModal, setShowModal] = useState(false);
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
             <figure>
@@ -30,7 +32,10 @@ export function Movie({ data }) {
                             {data.release_date.slice(0, 4)}
                         </div>
                     </div>
-                    <Button name={'Details'} />
+                    <Button
+                        name={'Details'}
+                        onClick={() => setShowModal(true)}
+                    />
                 </div>
             </div>
         </div>
