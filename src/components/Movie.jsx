@@ -1,17 +1,14 @@
 // Atomic design: card component
 
-export function Movie() {
+export function Movie({ data }) {
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-xl">
             <figure>
                 <img src="" alt="movie picture from api" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">Movie title from api</h2>
-                <p>
-                    Here goes the movie description, coming from the api. It
-                    should be trimmed after n words.
-                </p>
+                <h2 className="card-title">{data.title}</h2>
+                <p>{data.overview.slice(0, 80) + ' ...'}</p>
                 <div className="card-action-container">
                     <div className="button-container flex flex-row justify-end">
                         <button className="btn btn-active btn-neutral">
