@@ -1,7 +1,14 @@
+// Component: header
+
+/*
+todos:
+- make header sticky
+*/
+
 export function Header() {
     return (
         // the header should have a color gradient
-        <div className="navbar bg-[#c3a689] shadow-md mb-4">
+        <div className="navbar bg-[#c3a689] shadow-md shadow-[#c3a689] mb-4">
             <div className="flex-1">
                 <div className="flex flex-row justify-between">
                     <div className="w-10">
