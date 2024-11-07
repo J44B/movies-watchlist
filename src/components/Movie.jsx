@@ -2,16 +2,15 @@
 
 /* 
 todos:
-- outsourcing of button and badges
+- outsourcing of badges
 - button functionality
 - smaller cards with fitting images
 */
-
-import { Button } from './components-index';
-import { useState } from 'react';
+import { forwardRef } from 'react';
+import { Button, Modal } from './components-index';
 
 export function Movie({ data }) {
-    const [showModal, setShowModal] = useState(false);
+    const modalRef = forwardRef();
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
             <figure>
@@ -34,8 +33,9 @@ export function Movie({ data }) {
                     </div>
                     <Button
                         name={'Details'}
-                        onClick={() => setShowModal(true)}
+                        onClick={() => modalRef.current.showModal()}
                     />
+                    <Modal ref={modalRef} />
                 </div>
             </div>
         </div>

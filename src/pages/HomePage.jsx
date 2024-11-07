@@ -13,6 +13,7 @@ import { Movie } from '../components/components-index';
 
 export function HomePage() {
     const [popularMovies, setPopularMovies] = useState([]);
+
     // needs error state
     // needs loading state
 
