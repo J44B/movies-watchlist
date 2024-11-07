@@ -20,7 +20,7 @@ export function HomePage() {
     useEffect(() => {
         async function getMovies() {
             const data = await getPopularMovies();
-            console.log(data);
+            // console.log(data);
             setPopularMovies(data.results);
         }
 
