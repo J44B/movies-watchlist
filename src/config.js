@@ -1,5 +1,11 @@
 // Configuration file for API Key and other settings
 
+/*
+Todos:
+- include adult movies
+- include videos
+*/
+
 export const apiKey = 'b964b6c561a2a384e332abb16d0c63e2';
 
 export const baseUrl = 'https://api.themoviedb.org/3/';
