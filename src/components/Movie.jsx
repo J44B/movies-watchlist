@@ -1,13 +1,19 @@
 // Atomic design: card component
 
 /* 
-todos:
+Todos:
+
+GENERAL
 - outsourcing of badges
 - button functionality
 - smaller cards with fitting images
+
+MODAL
+- get proper genres
+- get smaller image
 */
 
-// import { ModalButton } from './components-index';
+import { convertReleaseDate } from '../utils/utiliyFunctions';
 
 export function Movie({ data }) {
     return (
@@ -24,7 +30,7 @@ export function Movie({ data }) {
                 <div className="card-action-container flex flex-row justify-between items-center">
                     <div className="badge-container flex flex-row gap-2 ">
                         <div className="badge badge-outline bg-[#89b49f] text-[#2f4858] font-bold">
-                            {data.vote_average}
+                            {`${data.vote_average}` * 10 + '%'}
                         </div>
                         <div className="badge badge-outline">
                             {data.release_date.slice(0, 4)}
@@ -44,10 +50,22 @@ export function Movie({ data }) {
                         </button>
                         <dialog id={`my_modal_${data.id}`} className="modal">
                             <div className="modal-box">
+                                <figure>
+                                    <img
+                                        className="object-contain mb-4"
+                                        src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
+                                        alt={`Alternative movie poster - ${data.title}`}
+                                    />
+                                </figure>
                                 <h3 className="font-bold text-lg">
                                     {data.title}
                                 </h3>
-                                <p className="py-4">description</p>
+                                <p className="py-4">{data.overview}</p>
+                                <p className="py-4">
+                                    {`Release date: ${convertReleaseDate(
+                                        data.release_date
+                                    )}`}
+                                </p>
                                 <div className="modal-action">
                                     <form method="dialog">
                                         {/* if there is a button in form, it will close the modal */}
