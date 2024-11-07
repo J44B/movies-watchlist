@@ -5,15 +5,14 @@ Todos:
 
 GENERAL
 - outsourcing of badges
-- button functionality
-- smaller cards with fitting images
+- outsourcing of modal button
+- smaller cards with fitting images > use another url!
 
 MODAL
 - get proper genres
-- get smaller image
 */
 
-import { convertReleaseDate } from '../utils/utiliyFunctions';
+import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
 
 export function Movie({ data }) {
     return (
@@ -30,7 +29,7 @@ export function Movie({ data }) {
                 <div className="card-action-container flex flex-row justify-between items-center">
                     <div className="badge-container flex flex-row gap-2 ">
                         <div className="badge badge-outline bg-[#89b49f] text-[#2f4858] font-bold">
-                            {`${data.vote_average}` * 10 + '%'}
+                            {`${formatRating(data.vote_average)}`}
                         </div>
                         <div className="badge badge-outline">
                             {data.release_date.slice(0, 4)}
