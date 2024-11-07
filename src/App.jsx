@@ -2,11 +2,7 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout.jsx';
-import {
-    HomePage,
-    MoviesWatchList,
-    MovieDetails,
-} from './pages/pages-index.js';
+import { HomePage, MoviesWatchList } from './pages/pages-index.js';
 
 const router = createBrowserRouter([
     {
@@ -20,10 +16,6 @@ const router = createBrowserRouter([
             {
                 path: 'watchlist',
                 element: <MoviesWatchList />,
-            },
-            {
-                path: 'moviedetails',
-                element: <MovieDetails />,
             },
         ],
     },

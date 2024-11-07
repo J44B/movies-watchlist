@@ -2,14 +2,15 @@
 
 /* 
 todos:
-- outsourcing of button and badges
+- outsourcing of badges
 - button functionality
 - smaller cards with fitting images
 */
-
-import { Button } from './components-index';
+import { forwardRef } from 'react';
+import { Button, Modal } from './components-index';
 
 export function Movie({ data }) {
+    const modalRef = forwardRef();
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
             <figure>
@@ -30,7 +31,11 @@ export function Movie({ data }) {
                             {data.release_date.slice(0, 4)}
                         </div>
                     </div>
-                    <Button name={'Details'} />
+                    <Button
+                        name={'Details'}
+                        onClick={() => modalRef.current.showModal()}
+                    />
+                    <Modal ref={modalRef} />
                 </div>
             </div>
         </div>
