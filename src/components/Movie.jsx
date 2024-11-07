@@ -7,7 +7,7 @@ todos:
 - smaller cards with fitting images
 */
 
-import { ModalButton } from './components-index';
+// import { ModalButton } from './components-index';
 
 export function Movie({ data }) {
     return (
@@ -30,7 +30,34 @@ export function Movie({ data }) {
                             {data.release_date.slice(0, 4)}
                         </div>
                     </div>
-                    <ModalButton>no-function</ModalButton>
+                    {/* modal component with integrated button */}
+                    <div>
+                        <button
+                            className="btn"
+                            onClick={() =>
+                                document
+                                    .getElementById(`my_modal_${data.id}`)
+                                    .showModal()
+                            }
+                        >
+                            Details
+                        </button>
+                        <dialog id={`my_modal_${data.id}`} className="modal">
+                            <div className="modal-box">
+                                <h3 className="font-bold text-lg">
+                                    {data.title}
+                                </h3>
+                                <p className="py-4">description</p>
+                                <div className="modal-action">
+                                    <form method="dialog">
+                                        {/* if there is a button in form, it will close the modal */}
+                                        <button className="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
+                    {/* end modal component */}
                 </div>
             </div>
         </div>
