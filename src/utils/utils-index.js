@@ -1,11 +1,11 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
-import { apiKey, baseUrl, popularMoviesUrl } from './config';
+import { convertReleaseDate } from './utiliyFunctions';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { apiKey, baseUrl, popularMoviesUrl };
+export { convertReleaseDate };
 
 // -------------------------------------------- End export section  --------------------------------------------

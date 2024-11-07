@@ -13,6 +13,8 @@ MODAL
 - get smaller image
 */
 
+import { convertReleaseDate } from '../utils/utiliyFunctions';
+
 export function Movie({ data }) {
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
@@ -52,7 +54,7 @@ export function Movie({ data }) {
                                     <img
                                         className="object-contain mb-4"
                                         src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
-                                        alt={`Movie poster - ${data.title}`}
+                                        alt={`Alternative movie poster - ${data.title}`}
                                     />
                                 </figure>
                                 <h3 className="font-bold text-lg">
@@ -60,7 +62,9 @@ export function Movie({ data }) {
                                 </h3>
                                 <p className="py-4">{data.overview}</p>
                                 <p className="py-4">
-                                    {data.release_date.replaceAll('-', '.')}
+                                    {`Release date: ${convertReleaseDate(
+                                        data.release_date
+                                    )}`}
                                 </p>
                                 <div className="modal-action">
                                     <form method="dialog">
