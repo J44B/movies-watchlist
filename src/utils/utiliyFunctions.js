@@ -9,4 +9,10 @@ function convertReleaseDate(releaseDate) {
     return joinedDate.toString();
 }
 
-export { convertReleaseDate };
+// format rating to one decimal
+
+function formatRating(rating) {
+    return rating.toFixed(1);
+}
+
+export { convertReleaseDate, formatRating };
