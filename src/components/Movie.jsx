@@ -6,10 +6,14 @@ Todos:
 GENERAL
 - outsourcing of badges
 - outsourcing of modal button
+- outsourcing and better placement of favourite button
 - smaller cards with fitting images > use another url!
 
 MODAL
 - get proper genres
+
+FAV BUTTON
+- Fill when movie is favourite
 */
 
 import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
@@ -17,12 +21,32 @@ import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
 export function Movie({ data }) {
     return (
         <div className="card bg-[#514538] w-72 h-auto shadow-lg shadow-[#89b49f]">
-            <figure>
-                <img
-                    src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
-                    alt={`Movie poster - ${data.title}`}
-                />
-            </figure>
+            <div>
+                <figure>
+                    <img
+                        src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
+                        alt={`Movie poster - ${data.title}`}
+                    />
+                </figure>
+                {/* --------------------------- Begin favourite button --------------------------- */}
+                <button className="btn btn-xs mt-2 ml-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                        />
+                    </svg>
+                </button>
+                {/* --------------------------- End favourite button --------------------------- */}
+            </div>
             <div className="card-body">
                 <h2 className="card-title text-base">{data.title}</h2>
 
@@ -35,7 +59,7 @@ export function Movie({ data }) {
                             {data.release_date.slice(0, 4)}
                         </div>
                     </div>
-                    {/* modal component with integrated button */}
+                    {/* --------------------------- Begin modal component with integrated button --------------------------- */}
                     <div>
                         <button
                             className="btn"
@@ -74,7 +98,7 @@ export function Movie({ data }) {
                             </div>
                         </dialog>
                     </div>
-                    {/* end modal component */}
+                    {/* --------------------------- End modal component with integrated button --------------------------- */}
                 </div>
             </div>
         </div>
