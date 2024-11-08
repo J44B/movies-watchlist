@@ -4,7 +4,8 @@
 
 TODOS
 
-- fill heart if movie is favourite
+- - handle state of icon
+    - heart filled or not --> fill="currentColor"
 
 */
 

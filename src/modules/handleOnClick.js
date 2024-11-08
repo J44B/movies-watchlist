@@ -2,24 +2,20 @@
 
 /* 
 TODOS
-- handle state of icon
-    - heart filled or not
+
 - handle add
 - handle remove
 
 */
 
+// -------------------- Begin import section --------------------
 
-// -------------------- Begin import section -------------------- 
+import { addFavourite, removeFavourite } from './module-index';
 
-import { useState } from "react"
-import { addFavourite, removeFavourite } from "./module-index"
-
-//  -------------------- End import section -------------------- 
+//  -------------------- End import section --------------------
 
 // handle onClick favourite
 
+function handleFavourite() {}
 
-function handleFavourite () {
-    const
-}
+export { handleFavourite };
