@@ -1,13 +1,22 @@
 // Page Component: Shows watch list
 
-// useState und map
+// useState and map
 
-// import { useState } from 'react';
-// import { getFavorites } from '../modules/module-index';
-// import { Movie } from '../components/components-index';
+/* 
+Todos
+
+- Functionality
+    - remove favorite
+    - 
+*/
+
+import { useState } from 'react';
+import { getFavourites } from '../modules/module-index';
+import { Movie } from '../components/components-index';
 
 export function MoviesWatchList() {
-    // const [favourites, setFavourites] = useState([]);
+    const [favourites, setFavourites] = useState(getFavourites);
+    console.log(favourites);
 
     return (
         <>
@@ -16,9 +25,11 @@ export function MoviesWatchList() {
                     The watchlist with my favourite movies
                 </h1>
             </div>
-            <div className="movies-container grid grid-cols-4 gap-4"></div>
-            {/* Insert movie cards here, get data from local storage */}
-            {/* <Movie key={favourites.id} data={favourites} /> */}
+            <div className="movies-container grid grid-cols-4 gap-4">
+                {favourites?.map((movie) => (
+                    <Movie key={movie.id} data={movie} />
+                ))}
+            </div>
         </>
     );
 }
