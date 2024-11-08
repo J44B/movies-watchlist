@@ -17,7 +17,7 @@ function addFavorite(item) {
         localStorage.setItem('movies', JSON.stringify(movies));
         return movies;
     } catch (error) {
-        alert.error(error);
+        alert(error);
     }
 }
 

@@ -3,20 +3,24 @@
 /* 
 Todos:
 
-GENERAL
-- outsourcing of badges
-- outsourcing of modal button
-- outsourcing and better placement of favourite button
-- smaller cards with fitting images > use another url!
+FUNCTIONS
+- outsource 
+    - handle button click
 
-MODAL
-- get proper genres
 
-FAV BUTTON
-- Fill when movie is favourite
+COMPONENTS
+- modal > get proper genres
+    - smaller cards with fitting images > use another url!
+    - outsource
+        - badges
+        - modal button
+        - favourite button
+            - nicer placement (CSS position)
+            - fill if movie is favourite
 */
 
 import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
+import { addFavorite } from '../modules/module-index';
 
 export function Movie({ data }) {
     return (
@@ -31,9 +35,7 @@ export function Movie({ data }) {
                 {/* --------------------------- Begin favourite button --------------------------- */}
                 <button
                     className="btn btn-xs mt-2 ml-2"
-                    onClick={() =>
-                        localStorage.setItem(data.id, JSON.stringify(data))
-                    }
+                    onClick={() => addFavorite(data)}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
