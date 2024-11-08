@@ -29,7 +29,12 @@ export function Movie({ data }) {
                     />
                 </figure>
                 {/* --------------------------- Begin favourite button --------------------------- */}
-                <button className="btn btn-xs mt-2 ml-2">
+                <button
+                    className="btn btn-xs mt-2 ml-2"
+                    onClick={() =>
+                        localStorage.setItem(data.id, JSON.stringify(data))
+                    }
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-4 w-4"
