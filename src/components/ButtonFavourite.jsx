@@ -1,5 +1,11 @@
 // Button component to add and remove favourites
 
+/* 
+Todos
+
+- extract onClick handle
+*/
+
 import { addFavourite } from '../modules/module-index';
 
 function ButtonFavourite(data) {

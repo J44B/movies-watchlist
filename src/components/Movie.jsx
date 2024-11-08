@@ -32,12 +32,10 @@ export function Movie({ data }) {
                         alt={`Movie poster - ${data.title}`}
                     />
                 </figure>
-
                 <ButtonFavourite data={data} />
             </div>
             <div className="card-body">
                 <h2 className="card-title text-base">{data.title}</h2>
-
                 <div className="card-action-container flex flex-row justify-between items-center">
                     <div className="badge-container flex flex-row gap-2 ">
                         <div className="badge badge-outline bg-[#89b49f] text-[#2f4858] font-bold">
