@@ -1,12 +1,12 @@
 // -------------------------------------------- Begin import section  --------------------------------------------
 
 import { getPopularMovies } from './fetchPopularMovies';
-import { getFavorites, addFavorite, removeFavorite } from './localStorage';
+import { getFavourites, addFavourite, removeFavourite } from './localStorage';
 
 // -------------------------------------------- End import section  ----------------------------------------------
 
 // -------------------------------------------- Begin export section  --------------------------------------------
 
-export { getPopularMovies, getFavorites, addFavorite, removeFavorite };
+export { getPopularMovies, getFavourites, addFavourite, removeFavourite };
 
 // -------------------------------------------- End export section  --------------------------------------------

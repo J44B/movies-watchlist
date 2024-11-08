@@ -2,13 +2,13 @@
 
 // get favourites from local storage
 
-function getFavorites() {
+function getFavourites() {
     return JSON.parse(localStorage.getItem('movies')) || [];
 }
 
 // add favourite to local storage
 
-function addFavorite(item) {
+function addFavourite(item) {
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
     try {
         if (movies.some((x) => x.id === item.id))
@@ -23,11 +23,11 @@ function addFavorite(item) {
 
 // remove favourite from local storage
 
-function removeFavorite(item) {
+function removeFavourite(item) {
     let movies = JSON.parse(localStorage.getItem('movies')) || [];
 
     movies = movies.filter((x) => x.id !== item.id);
     localStorage.setItem('movies', JSON.stringify(movies));
 }
 
-export { getFavorites, addFavorite, removeFavorite };
+export { getFavourites, addFavourite, removeFavourite };

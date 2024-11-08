@@ -20,7 +20,7 @@ COMPONENTS
 */
 
 import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
-import { addFavorite } from '../modules/module-index';
+import { addFavourite } from '../modules/module-index';
 
 export function Movie({ data }) {
     return (
@@ -35,7 +35,7 @@ export function Movie({ data }) {
                 {/* --------------------------- Begin favourite button --------------------------- */}
                 <button
                     className="btn btn-xs mt-2 ml-2"
-                    onClick={() => addFavorite(data)}
+                    onClick={() => addFavourite(data)}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
