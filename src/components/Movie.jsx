@@ -20,7 +20,7 @@ COMPONENTS
 */
 
 import { convertReleaseDate, formatRating } from '../utils/utiliyFunctions';
-import { addFavourite } from '../modules/module-index';
+import { ButtonFavourite } from '../components/components-index';
 
 export function Movie({ data }) {
     return (
@@ -32,27 +32,8 @@ export function Movie({ data }) {
                         alt={`Movie poster - ${data.title}`}
                     />
                 </figure>
-                {/* --------------------------- Begin favourite button --------------------------- */}
-                <button
-                    className="btn btn-xs mt-2 ml-2"
-                    onClick={() => addFavourite(data)}
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                        />
-                    </svg>
-                </button>
-                {/* --------------------------- End favourite button --------------------------- */}
+
+                <ButtonFavourite data={data} />
             </div>
             <div className="card-body">
                 <h2 className="card-title text-base">{data.title}</h2>
