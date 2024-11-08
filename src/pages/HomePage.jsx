@@ -35,8 +35,8 @@ export function HomePage() {
         <>
             <h1 className="text-3xl mb-4">/HomePage/ - Popular movies</h1>
             <div className="movies-container grid grid-cols-4 gap-4">
-                {popularMovies?.map((item) => (
-                    <Movie key={item.id} data={item} />
+                {popularMovies?.map((movie) => (
+                    <Movie key={movie.id} data={movie} />
                 ))}
             </div>
         </>
